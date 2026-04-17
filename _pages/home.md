@@ -1,4 +1,5 @@
 ---
+title: "Home"
 layout: splash
 permalink: /
 hidden: true
