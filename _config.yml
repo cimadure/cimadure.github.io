@@ -10,6 +10,8 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
+
+# What could change : theme, remote_theme, url baseurl
 #theme           : "minimal-mistake" # local s@4.28.0
 theme: minimal-mistakes-jekyll
 #remote_theme           : "mmistakes/minimal-mistakes@4.28.0" # GitHub Pages
@@ -18,7 +20,7 @@ minimal_mistakes_skin    : "mint" # "default", "air", "aqua", "contrast", "dark"
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ron's world"
+title                    : "Ron's Universe"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ronan Cimadure"
@@ -117,7 +119,7 @@ analytics:
 author:
   name             : "Ronan Cimadure"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "I am a **X-Engineer**."
   location         : "Canada"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
@@ -127,43 +129,46 @@ author:
       # url: "mailto:your.name@email.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://cimadure.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-square-x-twitter"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-square-facebook"
-      # url: "https://facebook.com/"
+      url: "https://twitter.com/cimadure"
+    #- label: "Facebook"
+    #  icon: "fab fa-fw fa-square-facebook"
+    #  # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/cimadure"
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  # url: "https://instagram.com/"
+
+
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-square-x-twitter"
-      # url:
-      # rel: "me"  # optional: adds rel attribute (e.g. for IndieWeb web sign-in)
-    - label: "Facebook"
-      icon: "fab fa-fw fa-square-facebook"
-      # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
-  since: "2013"
+      url: https://github.com/cimadure
+    - label: "X/Twitter"
+      icon: "fab fa-fw fa-square-x-twitter"
+      url: https://x.com/cimadure
+      # rel: "me"  # optional: adds rel attribute (e.g. for IndieWeb web sign-in)
+    #- label: "Facebook"
+    #  icon: "fab fa-fw fa-square-facebook"
+    #  # url:
+
+    #- label: "GitLab"
+    #  icon: "fab fa-fw fa-gitlab"
+    #  # url:
+    #- label: "Bitbucket"
+    #  icon: "fab fa-fw fa-bitbucket"
+    #  # url:
+    #- label: "Instagram"
+    #  icon: "fab fa-fw fa-instagram"
+    #  # url:
+  since: "2012"
 
 
 # Reading Files
@@ -233,7 +238,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Toronto # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate
@@ -268,6 +273,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jemoji
   - jekyll-include-cache
   - jekyll-data # for necessary data files for localization on GH PAges .
 
@@ -277,6 +283,7 @@ whitelist:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
+  - jemoji
   - jekyll-include-cache
   - jekyll-data
 
@@ -319,6 +326,23 @@ compress_html:
     envs: development
 
 
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+  #recipes:
+  #  output: true
+  #  permalink: /:collection/:path/
+  #pets:
+  #  output: true
+  #  permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+
+
 # Defaults
 defaults:
   # _posts
@@ -329,6 +353,36 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: false # true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      toc_sticky: true
+      sidebar:
+        nav: "docs"
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+

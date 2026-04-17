@@ -20,4 +20,4 @@ Gemfile.lock
 .env
 */.env
 
-/.idea
+.idea/
