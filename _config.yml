@@ -10,17 +10,19 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-remote_theme           : "mmistakes/minimal-mistakes@4.28.0"
+#theme           : "minimal-mistake" # local s@4.28.0
+theme: minimal-mistakes-jekyll
+#remote_theme           : "mmistakes/minimal-mistakes@4.28.0" # GitHub Pages
 minimal_mistakes_skin    : "mint" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ron's GHpage"
+title                    : "Ron's world"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ronan Cimadure"
-description              : "An amazing website."
+description              : "An GitHub Page website."
 url                      : "https://cimadure.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -29,7 +31,7 @@ logo                     : # path of logo image to display in the masthead, e.g.
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : # true, false (default)
 words_per_minute         : 200
-enable_copy_code_button  : # true, false (default)
+enable_copy_code_button  : true # true, false (default)
 copyright                : # "copyright" name, defaults to site.title
 copyright_url            : # "copyright" URL, defaults to site.url
 comments:
@@ -89,11 +91,11 @@ baidu_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
+  username               : cimadure
+#facebook:
+#  username               :
+#  app_id                 :
+#  publisher              :
 og_image                 : # Open Graph/Twitter default site image
 og_image_alt             : # Alt text for Open Graph/Twitter default site image
 # For specifying social profiles
@@ -116,7 +118,7 @@ author:
   name             : "Ronan Cimadure"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **amazing** person."
-  location         : "Somewhere"
+  location         : "Canada"
   email            :
   # fediverse      : "@you@instance.social"  # used for fediverse:creator meta tag
   links:
