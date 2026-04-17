@@ -1,0 +1,9 @@
+# global settings
+title: "Ronan's homepage"
+description: "Bookmark this to keep an eye on my project updates!"
+url: https://cimadure.github.com
+
+
+# theme: jekyll-theme-minimal
+# theme: minimal-mistakes-jekyll
+remote_theme: just-the-docs/just-the-docs
