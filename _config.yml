@@ -13,14 +13,14 @@
 
 # What could change : theme, remote_theme, url baseurl
 #theme           : "minimal-mistake" # local s@4.28.0
-theme: minimal-mistakes-jekyll
-#remote_theme           : "mmistakes/minimal-mistakes@4.28.0" # GitHub Pages
+#theme: minimal-mistakes-jekyll
+remote_theme           : "mmistakes/minimal-mistakes@4.28.0" # GitHub Pages
 minimal_mistakes_skin    : "mint" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_latte", "catppuccin_mocha"
 
 # Site Settings
 locale                   : "en-US"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Ron's Universe"
+title                    : "🪐"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Ronan Cimadure"
@@ -98,7 +98,7 @@ twitter:
 #  username               :
 #  app_id                 :
 #  publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/bio-photo.jpg" # Open Graph/Twitter default site image
 og_image_alt             : # Alt text for Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
@@ -118,7 +118,7 @@ analytics:
 # Site Author
 author:
   name             : "Ronan Cimadure"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/bio-photo.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a **X-Engineer**."
   location         : "Canada"
   email            :
@@ -133,27 +133,28 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-square-x-twitter"
       url: "https://twitter.com/cimadure"
-    #- label: "Facebook"
-    #  icon: "fab fa-fw fa-square-facebook"
-    #  # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cimadure"
-    #- label: "Instagram"
-    #  icon: "fab fa-fw fa-instagram"
-    #  # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ronan-cimadure/"
 
 
 
 # Site Footer
 footer:
   links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ronan-cimadure/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: https://github.com/cimadure
     - label: "X/Twitter"
       icon: "fab fa-fw fa-square-x-twitter"
       url: https://x.com/cimadure
+
       # rel: "me"  # optional: adds rel attribute (e.g. for IndieWeb web sign-in)
     #- label: "Facebook"
     #  icon: "fab fa-fw fa-square-facebook"
@@ -340,7 +341,8 @@ collections:
   #  permalink: /:collection/:path/
   portfolio:
     output: true
-    permalink: /:collection/:path/
+    #permalink: /:collection/:path/
+    permalink: /portfolio/:path/
 
 
 # Defaults
